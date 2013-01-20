@@ -7,6 +7,7 @@ Why
 ---
 Look, there are things you need to do in order to create proper view controllers in Cocoa.
 These things include: 
+
 1. Setting up your NSFetchedResultsController 
 2. Implementing the very standard NSFetchedResultsController delegate methods
 3. Setting up your NSPredicates 
@@ -19,6 +20,7 @@ busy work so you can get to the fun stuff.
 Assumptions
 -----------
 I should note at least the following assumptions:
+
 1. You've already got your data model already set up
 2. You already have UITableViewCells ready to use
 
