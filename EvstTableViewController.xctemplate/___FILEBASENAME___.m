@@ -15,12 +15,13 @@
 @implementation ___FILEBASENAMEASIDENTIFIER___
 
 #pragma mark - UITableViewDelegate
-#pragma mark - Table view delegate
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath 
+{
     <#Code when row is selected#>
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath 
+{
     return <#heightForRowAtIndexPath#>;
 }
 
@@ -35,14 +36,17 @@
     return [[[[self fetchedResultsController] sections] objectAtIndex:section] numberOfObjects];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath 
+{
     <#return [[UITableViewCell alloc] init];#>
 }
 
 #pragma mark - NSFetchedResultsController Setup
-- (NSFetchedResultsController *)fetchedResultsController {
+- (NSFetchedResultsController *)fetchedResultsController 
+{
 
-    if (_fetchedResultsController) {
+    if (_fetchedResultsController) 
+    {
         return _fetchedResultsController;
     }
     
@@ -63,7 +67,8 @@
     [self setFetchedResultsController:fetchedResultsController];
     
     NSError *error = nil;
-    if (![fetchedResultsController performFetch:&error])	{
+    if (![fetchedResultsController performFetch:&error])	
+    {
         <#NSLog#>(@"Error: %@", [error localizedFailureReason]);
     }
     
@@ -88,7 +93,8 @@
            atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type
 {
     
-    switch(type) {
+    switch(type) 
+    {
         case NSFetchedResultsChangeInsert:
             [self.tableView insertSections:[NSIndexSet indexSetWithIndex:sectionIndex]
                           withRowAnimation:UITableViewRowAnimationFade];
@@ -107,7 +113,8 @@
       newIndexPath:(NSIndexPath *)newIndexPath
 {
     
-    switch(type) {
+    switch(type) 
+        {
             
         case NSFetchedResultsChangeInsert:
             [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath]
